@@ -1,5 +1,4 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import AboutMe from './components/AboutMe';
 import HomeHouseSection from './components/HomeHouseSection';
@@ -10,7 +9,7 @@ import GrandfatherSection from './components/GrandfatherSection';
 
 function App() {
   return (
-    <Router>
+    <div>
       <div className="bg-slate-950 min-h-screen text-white relative selection:bg-indigo-500 selection:text-white">
         
         {/* Barra de navegación modular */}
@@ -27,7 +26,7 @@ function App() {
         </Routes>
 
       </div>
-    </Router>
+    </div>
   );
 }
 
