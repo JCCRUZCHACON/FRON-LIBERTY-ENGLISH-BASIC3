@@ -9,9 +9,7 @@ const Navbar = () => {
   const isProfileActive = location.pathname === '/';
   const isHouseActive = location.pathname === '/house';
   const isFatherActive = location.pathname === '/father';
-  const isMotherActive = location.pathname === '/mother';
-  const isBrotherActive = location.pathname === '/brother';
-  const isGranfatherActive = location.pathname === '/grandfather';
+  
 
   // Cierra el menú al hacer clic en una opción en móvil
   const handleLinkClick = () => {
@@ -32,8 +30,7 @@ const Navbar = () => {
               : 'text-slate-400 hover:text-white hover:bg-slate-900/80 border border-transparent'
           }`}
         >
-          <User className={`w-4 h-4 ${isProfileActive ? 'text-white animate-pulse' : 'text-indigo-400'}`} />
-          <span>Profile</span>
+          <span>FATHER</span>
         </Link>
 
         <div className="w-[1px] h-5 bg-gradient-to-b from-transparent via-indigo-500/50 to-transparent"></div>
@@ -46,8 +43,7 @@ const Navbar = () => {
               : 'text-slate-400 hover:text-white hover:bg-slate-900/80 border border-transparent'
           }`}
         >
-          <Home className={`w-4 h-4 ${isHouseActive ? 'text-white animate-pulse' : 'text-purple-400'}`} />
-          <span>Family & Home</span>
+          <span>SISTER</span>
         </Link>
 
         <div className="w-[1px] h-5 bg-gradient-to-b from-transparent via-indigo-500/50 to-transparent"></div>
@@ -60,51 +56,11 @@ const Navbar = () => {
               : 'text-slate-400 hover:text-white hover:bg-slate-900/80 border border-transparent'
           }`}
         >
-          <Tv className={`w-4 h-4 ${isFatherActive ? 'text-white animate-pulse' : 'text-blue-400'}`} />
-          <span>My Father</span>
+          <span>PROFILE</span>
         </Link>
 
         <div className="w-[1px] h-5 bg-gradient-to-b from-transparent via-indigo-500/50 to-transparent"></div>
 
-        <Link 
-          to="/mother" 
-          className={`relative flex items-center gap-2 px-5 py-2.5 rounded-full font-bold text-xs lg:text-sm tracking-wide transition-all duration-500 overflow-hidden group whitespace-nowrap ${
-            isMotherActive 
-              ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-[0_0_25px_rgba(219,39,119,0.8)] border border-pink-300/50 scale-105' 
-              : 'text-slate-400 hover:text-white hover:bg-slate-900/80 border border-transparent'
-          }`}
-        >
-          <Tv className={`w-4 h-4 ${isMotherActive ? 'text-white animate-pulse' : 'text-pink-400'}`} />
-          <span>My Mother</span>
-        </Link>
-
-        <div className="w-[1px] h-5 bg-gradient-to-b from-transparent via-indigo-500/50 to-transparent"></div>
-
-        <Link 
-          to="/brother" 
-          className={`relative flex items-center gap-2 px-5 py-2.5 rounded-full font-bold text-xs lg:text-sm tracking-wide transition-all duration-500 overflow-hidden group whitespace-nowrap ${
-            isBrotherActive 
-              ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-[0_0_25px_rgba(5,150,105,0.8)] border border-emerald-300/50 scale-105' 
-              : 'text-slate-400 hover:text-white hover:bg-slate-900/80 border border-transparent'
-          }`}
-        >
-          <Tv className={`w-4 h-4 ${isBrotherActive ? 'text-white animate-pulse' : 'text-emerald-400'}`} />
-          <span>My Brother</span>
-        </Link>
-
-        <div className="w-[1px] h-5 bg-gradient-to-b from-transparent via-indigo-500/50 to-transparent"></div>
-
-        <Link 
-          to="/grandfather" 
-          className={`relative flex items-center gap-2 px-5 py-2.5 rounded-full font-bold text-xs lg:text-sm tracking-wide transition-all duration-500 overflow-hidden group whitespace-nowrap ${
-            isGranfatherActive 
-              ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-[0_0_25px_rgba(217,119,6,0.8)] border border-amber-300/50 scale-105' 
-              : 'text-slate-400 hover:text-white hover:bg-slate-900/80 border border-transparent'
-          }`}
-        >
-          <Tv className={`w-4 h-4 ${isGranfatherActive ? 'text-white animate-pulse' : 'text-amber-400'}`} />
-          <span>My Grandfather</span>
-        </Link>
       </nav>
 
 
@@ -133,7 +89,7 @@ const Navbar = () => {
               }`}
             >
               <User className="w-5 h-5 text-indigo-300" />
-              <span>Profile</span>
+              <span>FATHER</span>
             </Link>
 
             <Link 
@@ -144,7 +100,7 @@ const Navbar = () => {
               }`}
             >
               <Home className="w-5 h-5 text-purple-300" />
-              <span>Family & Home</span>
+              <span>SISTER</span>
             </Link>
 
             <Link 
@@ -155,40 +111,7 @@ const Navbar = () => {
               }`}
             >
               <Tv className="w-5 h-5 text-blue-300" />
-              <span>My Father</span>
-            </Link>
-
-            <Link 
-              to="/mother" 
-              onClick={handleLinkClick}
-              className={`flex items-center gap-3 px-4 py-3 rounded-2xl font-bold text-sm transition-all ${
-                isMotherActive ? 'bg-pink-600 text-white shadow-md' : 'text-slate-300 hover:bg-slate-900/80 hover:text-white'
-              }`}
-            >
-              <Tv className="w-5 h-5 text-pink-300" />
-              <span>My Mother</span>
-            </Link>
-
-            <Link 
-              to="/brother" 
-              onClick={handleLinkClick}
-              className={`flex items-center gap-3 px-4 py-3 rounded-2xl font-bold text-sm transition-all ${
-                isBrotherActive ? 'bg-emerald-600 text-white shadow-md' : 'text-slate-300 hover:bg-slate-900/80 hover:text-white'
-              }`}
-            >
-              <Tv className="w-5 h-5 text-emerald-300" />
-              <span>My Brother</span>
-            </Link>
-
-            <Link 
-              to="/grandfather" 
-              onClick={handleLinkClick}
-              className={`flex items-center gap-3 px-4 py-3 rounded-2xl font-bold text-sm transition-all ${
-                isGranfatherActive ? 'bg-amber-600 text-white shadow-md' : 'text-slate-300 hover:bg-slate-900/80 hover:text-white'
-              }`}
-            >
-              <Tv className="w-5 h-5 text-amber-300" />
-              <span>My Grandfather</span>
+              <span>PROFILE</span>
             </Link>
 
           </div>

@@ -3,9 +3,6 @@ import Navbar from './components/Navbar';
 import AboutMe from './components/AboutMe';
 import HomeHouseSection from './components/HomeHouseSection';
 import FatherSection from './components/FatherSection';
-import MotherSection from './components/MotherSection';
-import BrotherSection from './components/BrotherSection';
-import GrandfatherSection from './components/GrandfatherSection';
 
 function App() {
   return (
@@ -20,9 +17,6 @@ function App() {
           <Route path="/" element={<AboutMe />} />
           <Route path="/house" element={<HomeHouseSection />} />
           <Route path="/father" element={<FatherSection />} />
-          <Route path="/mother" element={<MotherSection />} />
-          <Route path="/brother" element={<BrotherSection />} />
-          <Route path="/grandfather" element={<GrandfatherSection />} />
         </Routes>
 
       </div>
